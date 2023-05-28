@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  flex: 1;
+  background-color: #ff0000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px; /* Чуть-чуть снижение фотографии */
+}
+
+.user-details {
+  text-align: center;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.logout-button-container {
+  display: flex;
+  justify-content: flex-end; /* Изменение на выравнивание по правому краю */
+  padding: 20px;
+}
+
+.right {
+  flex: 1;
+  background-image: url('/static/images/profile.jpg');
+
+  background-size: cover;
+}

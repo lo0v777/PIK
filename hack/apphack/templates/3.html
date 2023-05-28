@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+
+    <head>
+        <title>Хозяйский</title>
+        <link rel="stylesheet" href="{% static "css/3.css" %}">
+
+        <link rel="shortcut icon" href="https://favicon.pik.ru/light/favicon.ico" type="image/x-icon">
+    </head>
+
+    <body>
+        <h2>Введите ваши данные</h2>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+
+            </div>
+            <div class="form-container sign-in-container">
+                <form method="POST" action="{% url 'main' %}">
+                    {% csrf_token %}
+                    <h1>Расчет</h1>
+                    <input type="wallWidth" placeholder="Ширина стены" />
+                    <input type="wallX" placeholder="Ширина команты" />
+                    <input type="wallY" placeholder="Длина комнаты" />
+                    <input type="wallZ" placeholder="Высота комнаты" />
+                    <input type="YnitazX" placeholder="Координата X унитаза" />
+                    <input type="YnitazY" placeholder="Координата Y унитаза" />
+                    <input type="YnitazZ" placeholder="Координата Z унитаза" />
+                    <input type="RakovinaX" placeholder="Координата X раковины" />
+                    <input type="RakovinaY" placeholder="Координата Y раковины" />
+                    <input type="RakovinaZ" placeholder="Координата Z раковины" />
+                    <input type="RakovinaX" placeholder="Координата X ванны" />
+                    <input type="RakovinaY" placeholder="Координата Y ванны" />
+                    <input type="RakovinaZ" placeholder="Координата Z ванны" />
+                    <input type="RakovinaX" placeholder="Координата X изгиба комнаты" />
+                    <input type="RakovinaY" placeholder="Координата Y изгиба команты" />
+                    
+
+
+
+                    <button type="submit">Расчет</button>
+                </form>
+            </div>
+        </div>
+        <script src="{% static 'reg.js' %}"></script>   
+
+    
+        <body>
+            <html

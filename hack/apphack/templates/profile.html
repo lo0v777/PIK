@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="{% static "css/profile.css" %}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="profile-picture">
+                <img src="{% static "images/acc.png" %}" alt="Profile Picture">
+            </div>
+            <div class="user-details">
+                <h2>ФИО</h2>
+                <p>username@pik.ru</p>
+            </div>
+            
+            <div class="logout-button-container">
+                <button id="logout-button" class="red-button">Выйти</button>
+            </div>
+        </div>
+        <img src="{% static "images/profile.jpg" %}" alt="Profile Picture">
+
+    </div>
+
+    <script src="{% static 'profile.js' %}"></script>   
+
+</body>
+</html> 

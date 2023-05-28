@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+  <head>
+    <title>Сервис генерации системы водоотведения</title>
+    <link rel="stylesheet" href="{% static "css/main.css" %}" >
+    <script src="{% static "main.js" %}"></script>
+  </head>
+
+  <body>
+    <div class="toolbar">
+      <div class="toolbar-logo">
+        <a href="https://pik.ru">
+          <img src="{% static "images/pik.png" %}" alt="Logo" />
+        </a>
+      </div>
+      <a class="toolbar-menu" href="about.html">О сервисе</a>
+      <div class="toolbar-account">
+        <a href="{% url 'profile' %}">
+          <img src="{% static "images/acc.png" %}" alt="Account" />
+          
+        </a>
+      </div>
+    </div>
+
+    <div class="container">
+      <span class="title">Выберите Вашу конфигурацию</span>
+      <div class="button">
+        <a href="{% url 'first' %}">
+          <img src="{% static "images/11.jpg" %}" />
+          
+        </a>
+      </div>
+      <div class="button">
+        <a href="{% url 'second' %}">
+          <img src="{% static "images/22.jpg" %}" />
+        </a>
+      </div>
+      <div class="button">
+        <a href="{% url 'third' %}">
+          <img src="{% static "images/33.jpg" %}" />
+        </a>
+      </div>
+    </div>
+
+    <video autoplay muted loop id="myVideo">
+      <source src="{% static "banner2.mp4" %}" type="video/mp4" />
+    </video> 
+  </body>
+</html>

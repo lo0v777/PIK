@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+	<title>Регистрация</title>
+	<link rel="stylesheet" href="{% static "css/reg.css" %}">
+	<link rel="shortcut icon" href="https://favicon.pik.ru/light/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<h2>Сервис Генерации трассы системы водоотведения</h2>
+	<div class="container" id="container">
+		<div class="form-container sign-up-container">
+			{% comment %} <form method="POST" action="/"> {% endcomment %}
+			<form method="POST" action="{% url 'reg' %}">
+				{% csrf_token %}
+				<h1>Создайте аккаунт</h1>
+				<input type="text" name="name" placeholder="Name" />
+				<input type="email" name="mail" placeholder="Email" />
+				<input type="password" name="passwd" placeholder="Password"/>
+				<button type="submit">Зарегистрироваться</button>
+			</form>
+		</div>
+		<div class="form-container sign-in-container">
+			{% comment %} <form method="POST" action="main/"> {% endcomment %}
+			<form method="POST" action="{% url 'main' %}">
+                {% csrf_token %}
+				<h1>Войти</h1>
+				<input type="text" name="name" placeholder="Name" />
+				<input type="password" name="passwd" placeholder="Password"/>
+				{% comment %} <a href="#">Забыли пароль?</a> {% endcomment %}
+				<button type="submit">Войти</button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-left">
+					<h1>Добро пожаловать!</h1>
+					<p>Чтобы оставаться на связи с нами, пожалуйста, войдите под своей личной информацией</p>
+					<button class="ghost" id="signIn">Войти</button>
+				</div>
+				<div class="overlay-panel overlay-right">
+					<h1>Привет, друг!</h1>
+					<p>Введи свои личные данные и начинай проектировать вместе с нами</p>
+					<button class="ghost" id="signUp">Зарегистрироваться</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="{% static 'reg.js' %}"></script>   
+</body>
+</html>
+			

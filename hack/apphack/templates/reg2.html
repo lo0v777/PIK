@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+	<title>Регистрация</title>
+	<link rel="stylesheet" href="{% static "css/reg.css" %}">
+	<script src="{% static 'reg.js' %}"></script>   
+	<link rel="shortcut icon" href="https://favicon.pik.ru/light/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<h2>Сервис Генерации трассы системы водоотведения</h2>
+	<div class="container" id="container">
+		<div class="form-container sign-in-container">
+			<form action="#">
+				<h1>Создайте аккаунт</h1>
+				<input type="text" placeholder="Name" />
+				<input type="email" placeholder="Email" />
+				<input type="password" placeholder="Password" />
+				<button>Зарегистрироваться</button>
+			</form>
+		</div>
+		
+		<div class="overlay-container">
+			<div class="overlay">
+				{% comment %} <div class="overlay-panel overlay-left">
+					<h1>Добро пожаловать!</h1>
+					<p>Чтобы оставаться на связи с нами, пожалуйста, войдите под своей личной информацией</p>
+					<button class="ghost" id="signIn">Войти</button>
+				</div> {% endcomment %}
+				<div class="overlay-panel overlay-right">
+                    <h3>Если вы прошли регистрацию, вернитесь на главную страницу</h3>
+					<button class="ghost" id="signUp"><a href ="reg.html">Вернуться на главную страницу</a></button>
+                    {% comment %} <a href ="reg.html">Вернуться на главную страницу</a> {% endcomment %}
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+			

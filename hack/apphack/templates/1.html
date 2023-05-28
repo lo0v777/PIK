@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+
+    <head>
+        <title>Гостевой</title>
+        <link rel="stylesheet" href="1.css">
+        <link rel="stylesheet" href="{% static "css/1.css" %}">
+        <link rel="shortcut icon" href="https://favicon.pik.ru/light/favicon.ico" type="image/x-icon">
+    </head>
+
+    <body>
+        <h2>Введите ваши данные</h2>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+
+            </div>
+            <div class="form-container sign-in-container">
+                <form method="POST" action="{% url 'main' %}">
+                    {% csrf_token %}
+                    <h1>Расчет</h1>
+                    <input type="wallWidth" name="wallWidth" placeholder="Ширина стены" />
+                    <input type="wallX" name="wallX" placeholder="Ширина команты" />
+                    <input type="wallY" name="wallY" placeholder="Длина комнаты" />
+                    <input type="wallZ" name="wallZ" placeholder="Высота комнаты" />
+                    <input type="YnitazX" name="YnitazX" placeholder="Координата X унитаза" />
+                    <input type="YnitazY" name="YnitazY" placeholder="Координата Y унитаза" />
+                    <input type="YnitazZ" name="YnitazZ" placeholder="Координата Z унитаза" />
+                    <input type="RakovinaX" name="RakovinaX" placeholder="Координата X раковины" />
+                    <input type="RakovinaY" name="RakovinaY" placeholder="Координата Y раковины" />
+                    <input type="RakovinaZ" name="RakovinaZ" placeholder="Координата Z раковины" />
+
+
+                    <button type="submit">Расчет</button>
+                </form>
+            </div>
+        </div>
+        <script src="{% static 'reg.js' %}"></script>   
+
+    
+        <body>
+            <html>
+    

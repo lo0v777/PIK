@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+
+    <head>
+        <title>Спаренный</title>
+        <link rel="stylesheet" href="{% static "css/2.css" %}">
+        <link rel="shortcut icon" href="https://favicon.pik.ru/light/favicon.ico" type="image/x-icon">
+    </head>
+
+    <body>
+        <h2>Введите ваши данные</h2>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+
+            </div>
+            <div class="form-container sign-in-container">
+                <form method="POST" action="{% url 'main' %}">
+                    {% csrf_token %}
+                    <h1>Расчет</h1>
+                    <input type="wallWidth" placeholder="Ширина стены" />
+                    <input type="wall1X" placeholder="Ширина первой команты" />
+                    <input type="wall1Y" placeholder="Длина первой комнаты" />
+                    <input type="wall1Z" placeholder="Высота первой комнаты" />
+                    <input type="YnitazX" placeholder="Координата X унитаза" />
+                    <input type="YnitazY" placeholder="Координата Y унитаза" />
+                    <input type="YnitazZ" placeholder="Координата Z унитаза" />
+                    <input type="RakovinaX" placeholder="Координата X перовй раковины" />
+                    <input type="RakovinaY" placeholder="Координата Y первой раковины" />
+                    <input type="RakovinaZ" placeholder="Координата Z первой раковины" />
+                    <input type="wall2X" placeholder="Ширина второй команты" />
+                    <input type="wall2Y" placeholder="Длина второй комнаты" />
+                    <input type="wall2Z" placeholder="Высота второй комнаты" />
+                    <input type="RakovinaX" placeholder="Координата X второй раковины" />
+                    <input type="RakovinaY" placeholder="Координата Y второй раковины" />
+                    <input type="RakovinaZ" placeholder="Координата Z второй раковины" />
+                    <input type="RakovinaX" placeholder="Координата X ванны" />
+                    <input type="RakovinaY" placeholder="Координата Y ванны" />
+                    <input type="RakovinaZ" placeholder="Координата Z ванны" />
+                    
+                    <button type="submit">Расчет</button>
+                </form>
+            </div>
+        </div>
+        <script src="{% static 'reg.js' %}"></script>   
+
+    
+        <body>
+            <html>
+
